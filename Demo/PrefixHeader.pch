@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  Demo
+//
+//  Created by Shelly on 2019/3/27.
+//  Copyright © 2019年 Shelly. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+//实际
+#define ScreenHeight   [UIScreen mainScreen].bounds.size.height
+
+///toolbar
+#define StatusH   [UIApplication sharedApplication].statusBarFrame.size.height
+#define NavH      self.navigationController.navigationBar.frame.size.height
+
+
+#import <ReactiveObjC.h>
+#import <Masonry.h>
+
+
+#endif /* PrefixHeader_pch */

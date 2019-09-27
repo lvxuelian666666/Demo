@@ -1,0 +1,38 @@
+PODS:
+  - HXPhotoPicker (2.3.3):
+    - YYWebImage
+  - Masonry (1.1.0)
+  - ReactiveObjC (3.1.1)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - HXPhotoPicker (~> 2.3.3)
+  - Masonry (~> 1.1.0)
+  - ReactiveObjC (~> 3.1.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - HXPhotoPicker
+    - Masonry
+    - ReactiveObjC
+    - YYCache
+    - YYImage
+    - YYWebImage
+
+SPEC CHECKSUMS:
+  HXPhotoPicker: 9d942cf77ea4222a525ecc5d3a52e7082dfdbe2d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: fbf8ab0d6c0955ba3be57b149a44b20dc9468816
+
+COCOAPODS: 1.6.1
