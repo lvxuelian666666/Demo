@@ -73,6 +73,8 @@
     [_nextBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _nextBtn.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_nextBtn];
+    [_nextBtn addTarget:self action:@selector(nextBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     [_nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).with.offset(100);
@@ -81,9 +83,24 @@
         make.height.mas_equalTo(50);
     }];
     
+    [[_nextBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"点击的时候 x=%@",x);
+    }];
     
+    [[self.view rac_signalForSelector:@selector(nextBtnClick:)]subscribeNext:^(RACTuple * _Nullable x) {
+        NSLog(@"按钮被点击的时候 %@",x);
+    }];
     
+    NSArray *numbers = @[@1,@2,@3,@4];
+    [numbers.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"x===%@",x);
+    }];
     
+}
+
+-(void)nextBtnClick:(UIButton *)btn
+{
+    NSLog(@"---click");
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
