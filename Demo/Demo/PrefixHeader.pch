@@ -1,0 +1,47 @@
+//
+//  PrefixHeader.pch
+//  Demo
+//
+//  Created by Shelly on 2019/3/27.
+//  Copyright © 2019年 Shelly. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+//实际
+#define ScreenHeight   [UIScreen mainScreen].bounds.size.height
+
+///toolbar
+#define StatusH   [UIApplication sharedApplication].statusBarFrame.size.height
+#define NavH      self.navigationController.navigationBar.frame.size.height
+/** 屏幕适配 */
+#define W   ((ScreenWidth > 375) ? ScreenWidth/375 : 1)
+#define H  ((ScreenWidth > 375) ? ScreenWidth/375 : 1)
+#define IMG_WIDTH [UIScreen mainScreen].bounds.size.width / 375
+//通用深色文字颜色 #333333
+#define Dark_Word_Color    RGB(51,51,51,1)
+//通用浅色文字颜色  #999999
+#define Light_Word_Color   RGB(153,153,153,1)
+#define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+//蓝色字体
+#define Blue_Word_Color  [UIColor colorwithHexString:@"#0093F4"]
+//通用线颜色 #CFCFCF
+#define Common_Line_Color  RGB(207,207,207,1)
+
+/*字体上是这样的*/
+#define CHINESE_SYSTEM(x) [UIFont systemFontOfSize:x*(KScreenWidthRatio > 1.2?1.1:1)]
+//屏幕尺寸字体适配
+#define KScreenWidthRatio ([UIScreen mainScreen].bounds.size.width/320.0)
+//通用蓝色
+#define Common_Blue_Color  [UIColor colorwithHexString:@"#0074C1"]
+#import <ReactiveObjC.h>
+#import <Masonry.h>
+#import "UIColor+Extension.h"
+//文本框默认字体颜色 #999999
+#define TextField_Defualt_Color  RGB(153,153,153,1)
+
+
+#endif /* PrefixHeader_pch */
